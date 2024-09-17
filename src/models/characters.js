@@ -1,5 +1,5 @@
 class Characters {
-  constructor({nome,velocidade,manobrabilidade,poder,pontos}) {
+  constructor({ nome, velocidade, manobrabilidade, poder, pontos }) {
     this.nome = nome
     this.velocidade = velocidade
     this.manobrabilidade = manobrabilidade
@@ -7,5 +7,20 @@ class Characters {
     this.pontos = pontos
   }
 
+  marcouPonto() {
+    console.log(`🎉 ${this.nome} marcou um ponto!`);
+    this.pontos++
+  }
+
+  perdeuPonto(nome) {
+    if (!this.pontos) return
+    console.log(`🐢 ${nome} venceu o confronto! ${this.nome} perdeu 1 ponto`);
+    this.pontos--
+  }
+
+  vitoria() {
+    console.log(`🏆 ${this.nome} venceu a corrida! Parabéns!`);
+  }
 }
+
 module.exports = Characters
