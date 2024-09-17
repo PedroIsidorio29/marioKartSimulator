@@ -1,8 +1,5 @@
-const Characters = require("./models/characters.js")
+const characters = require("./models/characters.js")
 const ClashEnum = require("./models/clash.enum.js")
-
-const player1 = new Characters({ nome: "Mario", velocidade: 4, manobrabilidade: 3, poder: 3, pontos: 0 })
-const player2 = new Characters({ nome: "Luigi", velocidade: 3, manobrabilidade: 4, poder: 4, pontos: 0 })
 
 async function rollDice() {
   return Math.floor(Math.random() * 6) + 1
@@ -81,7 +78,19 @@ async function playRaceEngine(character1, character2) {
   }
 }
 
+function getUniqueRandomItems() {
+  const result = [];
+  const arrayCopy = [...characters];
+  while (result.length < 2) {
+    const randomIndex = Math.floor(Math.random() * arrayCopy.length);
+    const [item] = arrayCopy.splice(randomIndex, 1);
+    result.push(item);
+  }
+  return result;
+}
+
 (async function main() {
+  const [player1, player2] = getUniqueRandomItems()
   console.log(`🏁🚨 Corrida entre ${player1.nome} e ${player2.nome} começando...`)
   await playRaceEngine(player1, player2)
   await declareWinner(player1, player2)
