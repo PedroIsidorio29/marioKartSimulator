@@ -5,10 +5,14 @@
             </td>
             <td>
                 <b>Objetivo:</b>
-                <p>Mario Kart é uma série de jogos de corrida desenvolvida e publicada pela Nintendo. Nosso desafio será criar uma lógica de um jogo de vídeo game para simular corridas de Mario Kart, levando em consideração as regras e mecânicas abaixo.</p>
+                <p>Este projeto consiste em um jogo simples desenvolvido em Node.js, inspirado no universo de Mario Kart. Dois personagens são escolhidos aleatoriamente e competem em uma corrida que se desenrola em cinco pistas diferentes. O foco está em simular a dinâmica da corrida, determinando o vencedor com base em regras e eventos aleatórios. O projeto visa fortalecer os conhecimentos de Node.js</p>
             </td>
         </tr>
     </table>
+
+<h2>Como Executar</h2>
+
+<p>Para rodar o projeto é necessario somente ter o Node.js instalado na maquina e executar o comando "npm run dev"</p>
 
 <h2>Players</h2>
       <table style="border-collapse: collapse; width: 800px; margin: 0 auto;">

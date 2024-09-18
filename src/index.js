@@ -11,10 +11,8 @@ function logRollResult(characterName, block, diceResult, attribute) {
 
 async function getRandomBlock() {
   const random = Math.random()
-  if (random < 0.33)
-    return ClashEnum.RETA
-  if (random < 0.66)
-    return ClashEnum.CURVA
+  if (random < 0.33) return ClashEnum.RETA
+  if (random < 0.66) return ClashEnum.CURVA
   return ClashEnum.CONFRONTO
 }
 
